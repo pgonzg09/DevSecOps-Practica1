@@ -7,7 +7,7 @@ on:
 
 jobs:
   doxygen_generation:
-    runs_on: ubuntu-latest
+    runs-on: ubuntu-latest
 
     permissions:
       contents: write
@@ -20,7 +20,7 @@ jobs:
         uses: mattnotmitt/doxygen-action@edge
         with:
           doxyfile-path: ".github/Doxyfile"
-          
+
       - name: Deploy Doxygen page
         uses: peaceiris/actions-gh-pages@v4
         with:
